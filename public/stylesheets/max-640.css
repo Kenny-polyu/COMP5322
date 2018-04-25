@@ -1,0 +1,48 @@
+.ts.grid>.column:not(.row), .ts.grid>.row .column:not(.row){
+	padding:0px;
+}
+.ts.grid .column[class*="four wide"]{
+	width:50px;
+}
+.ts.grid .column[class*="twelve wide"]{
+	width:calc(100% - 50px);
+}
+.ts.grid{
+	margin:0px;
+}
+.ts.items{
+	margin:0px;
+}
+.ts.container.narrow:not(.very).grid{
+	margin:0px!important;
+}
+.ts.segmented.items .item{
+	padding:6px 6px;
+}
+.ts.segmented.items .item.user{
+	padding:0px;
+}
+/*.ts.attached.secondary.segment{*/
+.ts.attached.segment{
+	padding:4px;
+}
+.userList>.item.user>.content{
+	text-align:center;
+	padding:0px!important;
+	text-overflow:clip!important;
+}
+.userList>.item.user>.ts.mini.image{
+	margin:2px 0px 2px 7px!important;
+}
+.userList>.item.user>.content>.header{
+	margin:0px!important;
+}
+.userList>.item>.content>.meta{
+	display:none;
+}
+.ts.menu .item{
+	padding:8px;
+}
+.dialog{
+	right:-40px;
+}

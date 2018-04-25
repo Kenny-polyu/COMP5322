@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>COMP5322 Chatroom</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.rawgit.com/TeaMeow/TocasUI/2.3.2/dist/tocas.css" rel='stylesheet'>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+	<link rel="stylesheet" media="(max-width: 640px)" href="/stylesheets/max-640.css">
+	<link rel="stylesheet" media="(min-width: 641px)" href="/stylesheets/min-640.css">
+	<link rel="stylesheet" media="(max-width: 640px) and (orientation: portrait)" href="/stylesheets/portrait.css">
+	<link rel="stylesheet" media="(max-width: 640px) and (orientation: landscape)" href="/stylesheets/landscape.css">
+	<script src="https://cdn.rawgit.com/TeaMeow/TocasUI/2.3.2/dist/tocas.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js'></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/locale/en-gb.js'></script>
+</head>
+
+<body>
+
+  <!-- Top menu -->
+  <div class="ts large link attached inverted info menu">
+    <div class="ts narrow container">
+      <a href="./" class="header item">COMP5322</a>
+	  <div class="right item dialogBtn">
+	  <div class="dialogBtnTitle">FAQ<img src="images/dialogflow.png"/></div>
+	  <div class="dialog"><iframe width="350" height="430" style="max-height:90vh;" src="https://console.dialogflow.com/api-client/demo/embedded/7a024c3a-cd2f-4f14-baf3-6dc391a93ad5"></iframe></div>
+	  </div>
+      <a class="right item login" onclick="login()">Login</a>
+      <a class="right item logout" onclick="logout()">Logout</a>
+    </div>
+	
+  </div>
+  <!-- / Top menu -->
+
+  <!-- Main -->
+  <div class="ts narrow container grid">
+    <!-- Left -->
+    <div class="twelve wide column">
+      <!-- Chatroom title -->
+      <div class="ts top attached segmented small single line items">
+        <div class="item">
+          <i class="large inverted info rounded announcement icon"></i>
+          <div class="content">
+			<div class="ts column grid">
+              <div class="column row">
+                <div class="header left floated column left aligned secondary">
+                  Chatroom
+                </div>
+                <div class="right floated column right aligned">
+                  <a href="/message/record" title="export"><i class="icon download positive" aria-hidden="true" alt="export" title="export"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="ts column grid">
+              <div class="column row">
+                <div class="left floated column left aligned secondary">
+                  Feel free to discuss anything here. =]
+                </div>
+                <div class="right floated column right aligned">
+                  <i class="icon user positive" aria-hidden="true" alt="people in chatroom" title="people in chatroom"></i>
+                  <span class="online">0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- / Chatroom title -->
+
+      <!-- message box -->
+      <div class="ts attached secondary segment">
+        <!-- speech -->
+        <div class="ts speeches">
+          <!-- appendChild from app.js -->
+        </div>
+        <!-- / speech -->
+      </div>
+      <!-- / message box -->
+
+      <!-- Msg input -->
+      <div class="ts bottom attached segment">
+        <div class="ts grid">
+          <div class="stretched column">
+            <div class="ts fluid input">
+              <input placeholder="Type something here~~" />
+            </div>
+          </div>
+          <div class="column">
+            <div id="btnAddMsg" class="ts button info">
+              <i class="icon chat"></i>Send</div>
+          </div>
+        </div>
+      </div>
+      <!-- / Msg input -->
+    </div>
+    <!-- / Left -->
+
+    <!-- Right -->
+    <div class="four wide column">
+      <div class="ts tiny segmented single line items userList"></div>
+    </div>
+    <!-- / Right -->
+  </div>
+  <!-- / Main -->
+</body>
+<script src='./javascripts/sign.js'></script>
+<script src='./javascripts/app.js'></script>
+
+</html>

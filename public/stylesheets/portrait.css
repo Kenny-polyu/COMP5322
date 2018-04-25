@@ -1,0 +1,31 @@
+.ts.narrow.container.grid{
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	box-orient: vertical;
+}
+.twelve.wide.column{
+	-webkit-box-ordinal-group: 2;
+	-moz-box-ordinal-group: 2;
+	box-ordinal-group: 2;
+	width:100vw!important;
+}
+.userList{
+    overflow-x: auto!important;
+	overflow-y: hidden!important;
+	max-height:60px!important;
+	white-space:nowrap;
+	width:100vw;
+}
+.userList>.item.user:not(:first-child){
+	border-left:1px solid #e9e9e9;
+}
+.userList>.item.user{
+	display:inline-block!important;
+	width:48px;
+}
+.ts .speeches{
+	height:calc(100vh - 204px);
+}

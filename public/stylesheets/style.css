@@ -1,0 +1,76 @@
+body{
+	overflow:hidden;
+}
+/* chat content scroll */
+.ts .speeches {
+  overflow-y: auto;
+  height: calc(100vh - 240px);
+  padding-right: 10px;
+}
+
+/* flex right align */
+
+.ts .speeches .right .speech .group {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* start add .time */
+
+.ts.speeches .speech .content {
+  flex: unset;
+}
+
+.ts.speeches .speech .time {
+  color: #aaa;
+  position: relative;
+  display: table;
+  margin-left: 1em;
+  padding: .58em .58em;
+  word-wrap: normal;
+  font-size: 12px;
+  line-height: 2em;
+}
+
+.ts.speeches .speech .broadcast {
+  color: #999;
+  position: relative;
+  display: table;
+  padding: .58em 0;
+  word-wrap: normal;
+  font-size: 12px;
+  line-height: 2em;
+}
+
+/* end add .time */
+
+.ts.menu .item.logout {
+  display: none;
+}
+
+.dialogBtn{
+	position:relative;
+	width:55%;
+	text-align:right;
+}
+.dialogBtnTitle{
+	width:100%;
+	cursor:pointer;
+}
+.dialogBtnTitle img{
+	height:17px;
+}
+.dialog{
+	position:absolute;
+	z-index:5;
+	right:0px;
+	top:35px;
+	display:none;
+	box-shadow: 2px 2px 6px black;
+}
+.header{
+	font-size:16px;
+}
+.ts.grid+.ts.grid{
+	margin:0px !important;
+}
